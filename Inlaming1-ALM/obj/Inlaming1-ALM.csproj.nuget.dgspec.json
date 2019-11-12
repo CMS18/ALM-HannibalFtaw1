@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hannibal\\source\\repos\\Inlaming1-ALM\\Inlaming1-ALM\\Inlaming1-ALM.csproj": {}
+    "C:\\Users\\Hannibal\\Source\\Repos\\CMS18\\ALM-HannibalFtaw1\\Inlaming1-ALM\\Inlaming1-ALM.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hannibal\\source\\repos\\Inlaming1-ALM\\Inlaming1-ALM\\Inlaming1-ALM.csproj": {
+    "C:\\Users\\Hannibal\\Source\\Repos\\CMS18\\ALM-HannibalFtaw1\\Inlaming1-ALM\\Inlaming1-ALM.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hannibal\\source\\repos\\Inlaming1-ALM\\Inlaming1-ALM\\Inlaming1-ALM.csproj",
+        "projectUniqueName": "C:\\Users\\Hannibal\\Source\\Repos\\CMS18\\ALM-HannibalFtaw1\\Inlaming1-ALM\\Inlaming1-ALM.csproj",
         "projectName": "Inlaming1-ALM",
-        "projectPath": "C:\\Users\\Hannibal\\source\\repos\\Inlaming1-ALM\\Inlaming1-ALM\\Inlaming1-ALM.csproj",
+        "projectPath": "C:\\Users\\Hannibal\\Source\\Repos\\CMS18\\ALM-HannibalFtaw1\\Inlaming1-ALM\\Inlaming1-ALM.csproj",
         "packagesPath": "C:\\Users\\Hannibal\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hannibal\\source\\repos\\Inlaming1-ALM\\Inlaming1-ALM\\obj\\",
+        "outputPath": "C:\\Users\\Hannibal\\Source\\Repos\\CMS18\\ALM-HannibalFtaw1\\Inlaming1-ALM\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
