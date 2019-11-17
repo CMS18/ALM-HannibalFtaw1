@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Inlaming1_ALM.Models.Entities;
+using Inlaming1_ALM.Models.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -59,6 +61,46 @@ namespace Inlaming1_ALM
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            var customers = AddCustomers();
+            BankRepository.AddCustomers(customers);
+            var allAccounts = new List<Account>();
+            foreach (var c in customers)
+            {
+                foreach (var account in c.Accounts)
+                {
+                    allAccounts.Add(account);
+                }
+            }
+
+            BankRepository.AddAccounts(allAccounts);
+        }
+
+        private Customer AddCustomer(int id, string name, decimal[] balances, int[] accountIds)
+        {
+            var accounts = new List<Account>();
+            for (int i = 0; i < balances.Count(); i++)
+            {
+                accounts.Add(new Account() {AccountID = accountIds[i], Balance = balances[i]});
+            }
+
+            return new Customer()
+            {
+                CustomerID = id,
+                CustomerName = name,
+                Accounts = accounts
+            };
+        }
+
+        private List<Customer> AddCustomers()
+        {
+            return new List<Customer>()
+            {
+                AddCustomer(1,"Hannibal", new decimal[]{7500m, 2255m}, new int[] {1, 2}),
+                AddCustomer(1,"Michael", new decimal[]{10000m, 1000m, 5000m}, new int[] {3, 4, 5}),
+                AddCustomer(1,"Fors", new decimal[]{5000m, 500m}, new int[] {6, 7}),
+                AddCustomer(1,"Ftaw", new decimal[]{5000m, 1000m, 15200000m}, new int[] {8, 9, 10}),
+
+            };
         }
     }
 }

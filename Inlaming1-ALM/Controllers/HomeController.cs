@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Inlaming1_ALM.Models;
+using Inlaming1_ALM.ViewModels;
 
 namespace Inlaming1_ALM.Controllers
 {
@@ -12,7 +13,9 @@ namespace Inlaming1_ALM.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var home = new HomeViewModel();
+
+            return View(home);
         }
 
         public IActionResult Privacy()
