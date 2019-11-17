@@ -5,7 +5,6 @@ C:\Users\Hannibal\Source\Repos\CMS18\ALM-HannibalFtaw1\Inlaming1-ALM\bin\Debug\n
 C:\Users\Hannibal\Source\Repos\CMS18\ALM-HannibalFtaw1\Inlaming1-ALM\bin\Debug\netcoreapp2.2\Inlaming1-ALM.pdb
 C:\Users\Hannibal\Source\Repos\CMS18\ALM-HannibalFtaw1\Inlaming1-ALM\bin\Debug\netcoreapp2.2\Inlaming1-ALM.Views.dll
 C:\Users\Hannibal\Source\Repos\CMS18\ALM-HannibalFtaw1\Inlaming1-ALM\bin\Debug\netcoreapp2.2\Inlaming1-ALM.Views.pdb
-C:\Users\Hannibal\Source\Repos\CMS18\ALM-HannibalFtaw1\Inlaming1-ALM\obj\Debug\netcoreapp2.2\Inlaming1-ALM.csprojAssemblyReference.cache
 C:\Users\Hannibal\Source\Repos\CMS18\ALM-HannibalFtaw1\Inlaming1-ALM\obj\Debug\netcoreapp2.2\Inlaming1-ALM.csproj.CoreCompileInputs.cache
 C:\Users\Hannibal\Source\Repos\CMS18\ALM-HannibalFtaw1\Inlaming1-ALM\obj\Debug\netcoreapp2.2\Inlaming1-ALM.RazorAssemblyInfo.cache
 C:\Users\Hannibal\Source\Repos\CMS18\ALM-HannibalFtaw1\Inlaming1-ALM\obj\Debug\netcoreapp2.2\Inlaming1-ALM.RazorAssemblyInfo.cs
