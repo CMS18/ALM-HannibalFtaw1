@@ -63,6 +63,16 @@ namespace Inlaming1_ALM
             });
             var customers = AddCustomers();
             BankRepository.AddCustomers(customers);
+            var allAccounts = new List<Account>();
+            foreach (var c in customers)
+            {
+                foreach (var account in c.Accounts)
+                {
+                    allAccounts.Add(account);
+                }
+            }
+
+            BankRepository.AddAccounts(allAccounts);
         }
 
         private Customer AddCustomer(int id, string name, decimal[] balances, int[] accountIds)
@@ -85,9 +95,9 @@ namespace Inlaming1_ALM
         {
             return new List<Customer>()
             {
-                AddCustomer(1,"Hannibal", new decimal[]{7500, 2255m}, new int[] {1, 2}),
+                AddCustomer(1,"Hannibal", new decimal[]{7500m, 2255m}, new int[] {1, 2}),
                 AddCustomer(1,"Michael", new decimal[]{10000m, 1000m, 5000m}, new int[] {3, 4, 5}),
-                AddCustomer(1,"Fors", new decimal[]{5000m, 500}, new int[] {6, 7}),
+                AddCustomer(1,"Fors", new decimal[]{5000m, 500m}, new int[] {6, 7}),
                 AddCustomer(1,"Ftaw", new decimal[]{5000m, 1000m, 15200000m}, new int[] {8, 9, 10}),
 
             };

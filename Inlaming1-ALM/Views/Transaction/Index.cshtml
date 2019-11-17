@@ -1,0 +1,119 @@
+﻿@model  Inlaming1_ALM.ViewModels.TransactionViewModel
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Deposit</h2>
+        <form asp-controller="Transaction" asp-action="Deposit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DepositAccountId" class="control-label"></label>
+                <input asp-for="DepositAccountId" class="form-control" />
+                <span asp-validation-for="DepositAccountId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DepositAmount" class="control-label"></label>
+                <input asp-for="DepositAmount" class="form-control" />
+                <span asp-validation-for="DepositAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Deposit" class="btn btn-primary" />
+            </div>
+            @if (Model.DepositErrorMessage != null)
+            {
+                <div class="form-group">
+                    <strong class="text-danger">@Model.DepositErrorMessage</strong>
+                </div>
+            }
+            @if (Model.DepositSuccessMessage != null)
+            {
+                <div class="form-group">
+                    <strong class="text-success">@Model.DepositSuccessMessage</strong>
+                </div>
+            }
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <h2>Withdraw</h2>
+        <form asp-controller="Transaction" asp-action="Withdraw">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="WithdrawalAccountId" class="control-label"></label>
+                <input asp-for="WithdrawalAccountId" class="form-control" />
+                <span asp-validation-for="WithdrawalAccountId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WithdrawalAmount" class="control-label"></label>
+                <input asp-for="WithdrawalAmount" class="form-control" />
+                <span asp-validation-for="WithdrawalAmount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Withdrawal" class="btn btn-primary" />
+            </div>
+            @if (Model.WithdrawalErrorMessage != null)
+            {
+                <div class="form-group">
+                    <strong class="text-danger">@Model.WithdrawalErrorMessage</strong>
+                </div>
+            }
+            @if (Model.WithdrawalSuccessMessage != null)
+            {
+                <div class="form-group">
+                    <strong class="text-success">@Model.WithdrawalSuccessMessage</strong>
+                </div>
+            }
+        </form>
+    </div>
+</div>
+
+
+
+@*<div class="container-fluid">
+    <div class="text-center">
+        <p>@TempData["Status"]</p>
+        <p>@TempData["ErrorMessage"]</p>
+    </div>
+    <div class="row">
+        <form class="col" asp-controller="Transaction" asp-action="Withdraw" method="post">
+            <div class="row">
+                <div class="input-group">
+                    <label>
+                        Account ID
+                        <input asp-for="WithdrawModel.Id" name="id" />
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label>
+                        Amount
+                        <input asp-for="WithdrawModel.Amount" name="amount" />
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">Withdraw</button>
+        </form>
+        <form class="col" asp-controller="Transaction" asp-action="Deposit" method="post">
+            <div class="row">
+                <div class="input-group">
+                    <label>
+                        Account ID
+                        <input asp-for="DepositModel.Id" name="id" />
+                    </label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-group">
+                    <label>
+                        Amount
+                        <input asp-for="DepositModel.Amount" name="amount" />
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Deposit</button>
+        </form>
+    </div>
+</div>*@
+
