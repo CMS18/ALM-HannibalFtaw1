@@ -175,5 +175,24 @@ namespace ALM_Test
             // Assert
             Assert.Equal(expected, account.ErrorMessage);
         }
+
+        [Fact]
+        public void Transfer_CantTransferNegativeAmounts()
+        {
+            // Arrange
+            var fromAccount = new Account() { AccountID = 11, Balance = 500M };
+            var toAccount = new Account() { AccountID = 22, Balance = 400M };
+            var amount = -400M;
+            var expectedError = Account.CantTransferNegativeAmounts;
+            var expectedAmount = 500M;
+
+
+            // Act
+            var account = fromAccount.Transfer(amount, fromAccount, toAccount);
+
+            // Assert
+            Assert.Equal(expectedAmount, account.Balance, 2);
+            Assert.Equal(expectedError, account.ErrorMessage);
+        }
     }
 }

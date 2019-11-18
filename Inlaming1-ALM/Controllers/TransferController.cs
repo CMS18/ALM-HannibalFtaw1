@@ -26,10 +26,12 @@ namespace Inlaming1_ALM.Controllers
             {
                 var accounts = BankRepository.GetAccounts();
                 var fromAccount = accounts.Find(a => a.AccountID == model.FromAccountId);
-                var toAccount = accounts.Find(a => a.AccountID == model.FromAccountId);
-                accounts[0].Transfer(model.Amount, fromAccount, toAccount);
-                model.ErrorMessage = accounts[0].ErrorMessage;
-                model.SuccessMessage = accounts[0].SuccessMessage;
+                var toAccount = accounts.Find(a => a.AccountID == model.ToAccountId);
+
+                fromAccount.Transfer(model.Amount, fromAccount, toAccount);
+
+                model.ErrorMessage = fromAccount.ErrorMessage;
+                model.SuccessMessage = fromAccount.SuccessMessage;
             }
             return View("Index", model);
         }
