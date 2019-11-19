@@ -38,22 +38,6 @@ namespace ALM_Test
             // Assert
             Assert.Equal(account.Balance, expectedBalance);
         }
-        //[Fact]
-        //public void TestDepositNegativeAmount()
-        //{
-        //    // Arrange
-        //    var account = Customer.Accounts.First();
-        //    var amount = -500m;
-        //    var expectedResult = false;
-
-        //    BankRepository.AddAccounts(Customer.Accounts);
-
-        //    // Act
-        //    var result = BankRepository.Deposit(amount, account.AccountID);
-
-        //    // Assert
-        //    Assert.Equal(result, expectedResult);
-        //}
 
         [Fact]
         public void TestWithdrawal()
@@ -107,7 +91,6 @@ namespace ALM_Test
             // Assert
             Assert.False(result);
         }
-
 
         [Fact]
         public void Transfer_CantTransferMoreThanBalanceFromAccount()
